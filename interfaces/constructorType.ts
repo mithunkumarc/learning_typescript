@@ -5,13 +5,6 @@ interface ClockConstructor {
     new (hour: number, minute: number): ClockInterface;
 }
 
-class Dock {
-  constructor(h: number, m: number) {
-
-  }
-}
-
-
 interface ClockInterface {
     tick(): void;
 }
