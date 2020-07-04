@@ -8,3 +8,4 @@
 8.  super() call mandaotory in child class constructor. no implicit super() like in java.
 9.  if u do not provide any constructor in child class, compiler will handle super().
 10. if u do not provide any constructor in child class , child class will use/inherit/getACopy of parent class constructor.
+11. public : is the default access modifier
