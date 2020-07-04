@@ -5,4 +5,6 @@
 5.  nested class not allowed
 6.  access modifiers can be used with constructor
 7.  class with private constructor cannot be inherited. same as java. can be used for immutable /singleton class
-8.  
+8.  super() call mandaotory in child class constructor. no implicit super() like in java.
+9.  if u do not provide any constructor in child class, compiler will handle super().
+10. if u do not provide any constructor in child class , child class will use/inherit/getACopy of parent class constructor.
