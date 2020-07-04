@@ -9,3 +9,4 @@ todo :
 7.  https://www.tutorialsteacher.com/typescript/type-assertion
 8.  https://www.digitalocean.com/community/tutorials/typescript-tuples
 9. set map
+10.  unions intersections
