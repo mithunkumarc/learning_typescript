@@ -1,7 +1,7 @@
 // access modifiers
 
 /*
-  public  : accessible everywhere
+  public  : accessible everywhere : default access modifier
   protected : same class and subclass
   private : same class
 */
