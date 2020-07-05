@@ -10,3 +10,4 @@ todo :
 8.  https://www.digitalocean.com/community/tutorials/typescript-tuples
 9. set map
 10.  unions intersections
+11.  https://blog.rsuter.com/how-to-instantiate-a-generic-type-in-typescript/
