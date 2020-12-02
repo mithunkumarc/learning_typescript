@@ -1,3 +1,5 @@
+#### Mixins encourage code reuse and can be used to avoid the inheritance ambiguity that multiple inheritance can cause 
+
 MIXINS : Similar to interface in java, mixins provides additinal features to existing class.
 
 
