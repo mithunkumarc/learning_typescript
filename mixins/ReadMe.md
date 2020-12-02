@@ -25,7 +25,7 @@ creating a custom type called Constructor function, Anonymous Function object as
         // type : used to create alias type
         // (...args: any[]) => {} : anonymous Function with arugments
         // args : constructor aruments ex: new Sprite("val1", "val2", ...)
-        // we have chosen Constructor work to indicate it contains Constructor function 
+        // we have chosen Constructor word to indicate it contains Constructor function 
         type Constructor = new (...args: any[]) => {}; 
         
 creating Mixin , we are declaring a function which receives a class and add methods(set/get methods)  
