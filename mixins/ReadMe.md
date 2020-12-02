@@ -8,6 +8,8 @@ example for implemeting mixin
 
 Consider a class Sprite, This is class which we are going to apply mixin  
 
+        // in old javascript, this sprite class is equavalent to constructor function
+        // means, js object can be created using (constructor)function too.
         class Sprite {
           name = "";
           x = 0;
@@ -18,18 +20,21 @@ Consider a class Sprite, This is class which we are going to apply mixin
           }
         }
 
-creating a custom type called Constructor, Anonymous Function object assigned as value
+creating a custom type called Constructor function, Anonymous Function object assigned as value(Class Sprite will extend this)
 
         // type : used to create alias type
-        // (...args: any[]) => {} : anonymous Function
-        type Constructor = new (...args: any[]) => {};
+        // (...args: any[]) => {} : anonymous Function with arugments
+        // args : constructor aruments ex: new Sprite("val1", "val2", ...)
+        // we have chosen Constructor work to indicate it contains Constructor function 
+        type Constructor = new (...args: any[]) => {}; 
         
-creating Mixin , we are declaring a function which receives a class and add methods(set/get methods)
+creating Mixin , we are declaring a function which receives a class and add methods(set/get methods)  
+Below function will take Sprite class which extends Custom type (Constructor function) Constructor.  
+New class created called Scaling and it inherits properties from Sprite returns new type/class.  
 
         function Scale<TBase extends Constructor>(Base: TBase) {
           return class Scaling extends Base {
-            // Mixins may not declare private/protected properties
-            // however, you can use ES2020 private fields
+  
             _scale = 1;
 
             setScale(scale: number) {
@@ -41,3 +46,13 @@ creating Mixin , we are declaring a function which receives a class and add meth
             }
           };
         }        
+        
+        
+Compose a new class from the Sprite class,  
+with the Mixin Scale applier:  
+
+        const EightBitSprite = Scale(Sprite);
+
+        const flappySprite = new EightBitSprite("Bird");
+        flappySprite.setScale(0.8);
+        console.log(flappySprite.scale);        
