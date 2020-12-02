@@ -33,6 +33,8 @@ Below function will take Sprite class which extends Custom type (Constructor fun
 New class created called Scaling and it inherits properties from Sprite returns new type/class.  
 
         function Scale<TBase extends Constructor>(Base: TBase) {
+        // here Base must be of type constructor function, so TBase extends Constructor(function)
+        // still need clarity on whey class Scaling needs class of type Constructor(function)
           return class Scaling extends Base {
   
             _scale = 1;
