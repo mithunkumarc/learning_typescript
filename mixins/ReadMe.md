@@ -31,15 +31,19 @@ creating a custom type called Constructor function, Anonymous Function object as
         // (...args: any[]) => {} : anonymous Function with arugments
         // args : constructor aruments ex: new Sprite("val1", "val2", ...)
         // we have chosen Constructor word to indicate it contains Constructor function 
+        // to make sure that mixin function receiving a class , we need this type
+        // doc says : The main responsibility is to declare, that the type being passed in is a class.
         type Constructor = new (...args: any[]) => {}; 
         
 creating Mixin , we are declaring a function which receives a class and add methods(set/get methods)  
 Below function will take Sprite class which extends Custom type (Constructor function) Constructor.  
 New class created called Scaling and it inherits properties from Sprite returns new type/class.  
-
+        
+        // extends Constructor makes sure that Base is a class, not a value/other types
         function Scale<TBase extends Constructor>(Base: TBase) {
         // here Base must be of type constructor function, so TBase extends Constructor(function)
         // still need clarity on whey class Scaling needs class of type Constructor(function)
+        // The main responsibility of type constructor is to make sure incoming param is a class.
           return class Scaling extends Base {
   
             _scale = 1;
