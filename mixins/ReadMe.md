@@ -2,6 +2,9 @@
 
 MIXINS : Similar to interface in java, mixins provides additinal features to existing class.
 
+overview :
+
+Sprite Class(need extra props) => Mixin Function Scale(Sprite) : adds extra props => New instance with Sprite props and extra props
 
 In Typescript, The pattern(MIXIN) relies on using Generics with class inheritance to extend a base class.   
 TypeScript’s best mixin support is done via the class expression pattern.  
