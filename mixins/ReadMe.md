@@ -67,3 +67,16 @@ with the Mixin Scale applier:
         const flappySprite = new EightBitSprite("Bird");
         flappySprite.setScale(0.8);
         console.log(flappySprite.scale);        
+        
+
+why mixin : 
+
+        The main limitation of the classic class pattern(inheritance) is that it normally allows only a single super class. 
+        But the real world is not structured like that. In the real world, seemingly unrelated entities can easily share behaviour.
+        Mixins solve exactly this problem
+
+More reading :  
+
+https://www.bryntum.com/blog/the-mixin-pattern-in-typescript-all-you-need-to-know/  
+https://www.typescriptlang.org/docs/handbook/mixins.html
+
