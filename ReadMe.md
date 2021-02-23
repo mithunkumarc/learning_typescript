@@ -12,3 +12,4 @@ todo :
 10.  unions intersections
 11.  https://blog.rsuter.com/how-to-instantiate-a-generic-type-in-typescript/
 12. https://fettblog.eu/
+13. https://github.com/PacktPublishing/Understanding-TypeScript-2020-Edition
