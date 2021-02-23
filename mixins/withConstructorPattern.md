@@ -1,8 +1,13 @@
+
+
+
 #### Mixins encourage code reuse and can be used to avoid the inheritance ambiguity that multiple inheritance can cause 
 
 MIXINS : Similar to interface in java, mixins provides additinal features to existing class.
 
 overview :
+
+
 
 Sprite Class(need extra props) => Mixin Function Scale(Sprite) : adds extra props => New instance with Sprite props and extra props
 
@@ -26,9 +31,10 @@ Consider a class Sprite, This is class which we are going to apply mixin
         }
 
 creating a custom type called Constructor function, Anonymous Function object assigned as value(Class Sprite will extend this)
-
+        
+        // (...args: any[]) => {} function constructor or you can call just es6 class
         // type : used to create alias type
-        // (...args: any[]) => {} : anonymous Function with arugments
+        // (...args: any[]) => {} : anonymous Function with arugments (or you can call es6class)
         // args : constructor aruments ex: new Sprite("val1", "val2", ...)
         // we have chosen Constructor word to indicate it contains Constructor function 
         // to make sure that mixin function receiving a class , we need this type
@@ -41,7 +47,7 @@ New class created called Scaling and it inherits properties from Sprite returns 
         
         // extends Constructor makes sure that Base is a class, not a value/other types
         function Scale<TBase extends Constructor>(Base: TBase) {
-        // here Base must be of type constructor function, so TBase extends Constructor(function)
+        // here Base must be of type constructor function(or es6 class), so TBase extends Constructor(function/es6class)
         // still need clarity on whey class Scaling needs class of type Constructor(function)
         // The main responsibility of type constructor is to make sure incoming param is a class.
           return class Scaling extends Base {
