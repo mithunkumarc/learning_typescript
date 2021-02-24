@@ -56,3 +56,18 @@ solution : making field weight optional
           name: 'john',
           height: 5,
         }
+
+
+
+#### interface and class itself are custom type, still you can create alias of interface or class.
+
+##### example:  creating alias interace Hero for interface Person
+
+            // as both are custom type, no need to create new alias Hero.
+            interface Person {
+                name: string;
+            }
+
+            type Hero = Person;
+
+            let actor: Hero = {name: "rajanna"};
