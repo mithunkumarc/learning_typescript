@@ -1,6 +1,7 @@
 // access modifiers
 
 /*
+  cannot be applied on class/interface, only applied on member of class
   public  : accessible everywhere : default access modifier
   protected : same class and subclass
   private : same class
@@ -31,3 +32,20 @@ class Zoo {
 let d:Dog = new Dog();
 d.accessAnimalProperties();
 let z:Zoo = new Zoo();
+
+
+
+/*
+  private constructor
+  cannot be instantiated using new operator outside class
+  but object literal can be create
+*/
+class Person {
+    private constructor(name: string){}
+}
+// object literal ok
+let p: Person = {name:'rangu'};
+console.log(p);
+
+// using new opearator : error
+let p1: Person = new Person("ranju");
