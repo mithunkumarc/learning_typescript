@@ -7,3 +7,8 @@ todo :
 
 
 #### interfaces extends multiple classes and interfaces too. doesnt inherit implemenation just method signature(abstract)
+
+
+#### interface vs type
+
+        https://blog.logrocket.com/types-vs-interfaces-typescript/
